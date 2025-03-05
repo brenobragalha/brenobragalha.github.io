@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-	site: 'http://brenobragalha.com/',
+	site: 'https://brenobragalha.com/',
 	integrations: [mdx(), sitemap()],
   markdown: {
     shikiConfig: {

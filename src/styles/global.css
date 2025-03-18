@@ -1,0 +1,147 @@
+:root {
+	--accent: #0073c8;
+  --white: #ffffff;
+	--black: #000000;
+	--gray: #757575;
+	--gray-light: #e6e6e6;
+	--gray-dark: #2d2d2d;
+}
+@keyframes pulseShadow {
+  0% {
+    box-shadow: 0 0 15px 5px #007dff;
+  }
+  25% {
+    box-shadow: 0 0 15px 5px #5555d7;
+  }
+  50% {
+    box-shadow: 0 0 15px 5px #af55e1;
+  }
+  75% {
+    box-shadow: 0 0 15px 5px #ff2d55;
+  }
+  100% {
+    box-shadow: 0 0 15px 5px #007dff;
+  }
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+	font-size: 20px;
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	color: var(--gray-dark);
+  background-color: var(--white);
+
+  word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+main {
+  flex: 1;
+	width: 768px;
+	max-width: 100%;
+	margin: auto;
+	padding: 2.5em 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em 0;
+	line-height: 1.25;
+	color: var(--black);
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2.5em;
+}
+h3 {
+	font-size: 1.95em;
+}
+h4 {
+	font-size: 1.55em;
+}
+h5 {
+	font-size: 1.25em;
+}
+/* p {
+  TODO
+} */
+a {
+	color: var(--accent);
+}
+a:hover {
+	color: var(--accent);
+}
+b,
+strong {
+  font-weight: 700;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+table {
+	width: 100%;
+}
+code {
+	padding: 2px 5px;
+	border-radius: 2px;
+	background-color: var(--gray-light);
+}
+pre {
+	padding: 1.5em;
+	border-radius: 5px;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	margin: 0px;
+	padding: 0 0 0 20px;
+	border-left: 3px solid var(--accent);
+	font-size: 1.1em;
+}
+kbd {
+  padding: 1px 5px;
+  border: solid 1px var(--gray-dark);
+  border-radius: 5px;
+  color: var(--gray-dark);
+  background-color: var(--gray-light);
+  box-shadow: 2px 2px 0 var(--gray);
+}
+hr {
+	border: none;
+	border-top: 1px solid var(--gray-light);
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 18px;
+	}
+	main {
+		padding: 1em;
+	}
+}
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

@@ -1,0 +1,102 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      img {
+        width: 250px;
+        height: auto;
+        border-radius: 999px;
+        margin-bottom: 1em;
+        animation: pulseShadow 5s infinite;
+      }
+      h1 {
+        margin: 0 0 0.2em 0;
+      }
+      p {
+        font-size: 1.2em;
+        margin: 0 0 1em 0;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--white);
+        background-color: var(--black);
+      }
+      a:hover {
+        animation: pulseShadow 5s infinite
+      }
+      @media (max-width: 425px) {
+        img {
+          width: 225px;
+        }
+        h1 {
+          margin-bottom: 0.3em;
+          line-height: 1;
+          font-size: 2.5em;
+        }
+        p {
+          margin-bottom: 0.8rem;
+        }
+      }
+      @media (max-width: 355px) {
+        img {
+          width: 200px;
+        }
+        h1 {
+          font-size: 2em;
+        }
+      }
+      @media (max-width: 320px) {
+        img {
+          width: 175px;
+        }
+      }
+      @media (max-width: 250px) {
+        img {
+          width: 160px;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+        p {
+          font-size: 1em;
+        }
+        a {
+          font-size: 0.8em;
+        }
+      }
+    </style>
+	</head>
+	<body>
+		<Header />
+		<main>
+      <img src="/me.webp" alt="Breno Bragalha" />
+			<h1>Breno Bragalha</h1>
+      <p>iOS Enginner & Swift Specialist</p>
+      <a href="/">
+        <i class="fa-brands fa-app-store"></i>
+        Apps
+      </a>
+		</main>
+		<Footer />
+	</body>
+</html>

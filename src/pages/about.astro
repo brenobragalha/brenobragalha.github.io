@@ -3,12 +3,14 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const aboutDescription = "Working on iOS apps and tools since 2023, I've contributed to projects that have impacted over 100,000 users worldwide. Always concerned with the user experience, I prioritize usability and high retention rates."
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`About | ${SITE_TITLE}`} description={aboutDescription} />
     <style>
       .title {
         margin-bottom: 1em;
